@@ -1,0 +1,40 @@
+#set coding
+##defencoding GBK
+##encoding UTF-8 GBK
+##see the startup message
+#startup_message off
+#term linux
+###use ` as the Global Key
+#### escape ``
+####set a biger buffer
+#defscrollback 409600
+hardstatus alwayslastline                                                                                                                   
+#shelltitle "$|bash"
+#
+#hardstatus string '%{= kG}[ %{G}%c:%s %{g}][%= %{= kw}%?%-Lw%?%{Y}%n*%f%t %{K}%?%+Lw%?%= %{kG}][ %{C}(F8)Screen (F9)Title (F10)Detach (F11)Prev (F12)Next %{kg}][%{kG} %l %Y/%m/%d %{kG}]'
+hardstatus string '%{= kw}%?%-Lw%?%{Y}%n*%f%t %{K}%?%+Lw%?%= %{kG}'
+#
+## a short version, can use C-a 
+##hardstatus string '%{= kg}[ %{G}%c:%s %{g}][%= %{= kw}%?%-Lw%?%{Y}%n*%f%t %{K}%?%+Lw%?%= %{g}][%{kG} %D %Y/%m/%d %{g}]'
+#
+##
+####shutdown the noise
+#vbell off
+##
+#### w to show the window list
+#bind w windowlist -b
+#bind ^w windowlist -b
+####initial apps to run
+#screen
+#screen
+#screen
+#select 0
+##
+bindkey -k k8 screen
+bindkey -k k9 title
+bindkey -k k; detach
+bindkey -k k7 prev
+bindkey -k F2 next
+bindkey -k k4 quit
+attrcolor u "-u B"
+#autodetach on
